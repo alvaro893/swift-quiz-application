@@ -20,6 +20,10 @@ class MainViewController: UIViewController {
         numberLabel.text = String(numberOfPlays)
         getMaximum()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        getMaximum()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,4 +68,5 @@ class MainViewController: UIViewController {
         let dictionaryEntries = dictionary!.words
         self.max = dictionaryEntries.count
     }
+    
 }

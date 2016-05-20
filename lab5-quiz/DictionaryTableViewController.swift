@@ -31,9 +31,6 @@ class DictionaryTableViewController: UITableViewController, NSFetchedResultsCont
         
         //set up fetched data
         fetchAndUpdateData()
-        
-        // testing reload of table
-        addOneWord("table", synonyms: ["pyötä"])
 
     }
     

@@ -30,6 +30,7 @@ class Quiz {
         self.currentWord = entry!.word
         self.currentSynonyms = Array(entry!.synonyms)
         self.score = 0
+        self.numberOfPlays -= 1
     }
     
     
