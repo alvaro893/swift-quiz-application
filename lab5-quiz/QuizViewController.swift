@@ -18,6 +18,8 @@ class QuizViewController: UIViewController {
     var quiz: Quiz?
     var numberOfPlays : Int? // this comes from other controler
     let dictionary = Dictionary.createOrGetDictionaryFrom("eng", to: "fin")
+    var corrects = 0
+    var wrongs = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class QuizViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         print("new game")
         quiz = Quiz(numberOfPlays: numberOfPlays!, dictionary: dictionary!)
+        corrects = 0
+        wrongs = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,11 +72,13 @@ class QuizViewController: UIViewController {
     func onCorrectAnswer(){
         let green = UIColor(red: 100/255, green: 255/255, blue: 100/255, alpha: 0.5)
         answerTextField.backgroundColor = green
+        corrects += 1
     }
     
     func onWrongAnswer(){
         let red = UIColor(red: 255/255, green: 90/255, blue: 90/255, alpha: 0.5)
         answerTextField.backgroundColor = red
+        wrongs += 1
     }
     
     
@@ -84,6 +90,8 @@ class QuizViewController: UIViewController {
         nextButton.enabled = false
         //hide keyboard
         answerTextField.resignFirstResponder()
+        print("statistics: wrong:" + String(wrongs) + " correct: " + String(corrects))
+        Statistics.createAndGetStatistics(wrongs, corrects: corrects)
     }
     
     func onAlways(word: String){

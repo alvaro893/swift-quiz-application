@@ -14,6 +14,8 @@
 		78372FE31CEDDB6B0005FD75 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78372FE21CEDDB6B0005FD75 /* QuizViewController.swift */; };
 		78372FE51CEDDDD90005FD75 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78372FE41CEDDDD90005FD75 /* Quiz.swift */; };
 		786C63701CEF1B3B00BE9143 /* ArrayShuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C636F1CEF1B3B00BE9143 /* ArrayShuffle.swift */; };
+		786C63731CEF220000BE9143 /* Statistics+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C63711CEF220000BE9143 /* Statistics+CoreDataProperties.swift */; };
+		786C63741CEF220000BE9143 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C63721CEF220000BE9143 /* Statistics.swift */; };
 		7875665F1CEAEA0000308E26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7875665E1CEAEA0000308E26 /* AppDelegate.swift */; };
 		787566641CEAEA0000308E26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787566621CEAEA0000308E26 /* Main.storyboard */; };
 		787566671CEAEA0000308E26 /* lab5_quiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 787566651CEAEA0000308E26 /* lab5_quiz.xcdatamodeld */; };
@@ -48,6 +50,8 @@
 		78372FE21CEDDB6B0005FD75 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		78372FE41CEDDDD90005FD75 /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		786C636F1CEF1B3B00BE9143 /* ArrayShuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayShuffle.swift; sourceTree = "<group>"; };
+		786C63711CEF220000BE9143 /* Statistics+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Statistics+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		786C63721CEF220000BE9143 /* Statistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		7875665B1CEAEA0000308E26 /* lab5-quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lab5-quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7875665E1CEAEA0000308E26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		787566631CEAEA0000308E26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		787566521CEAEA0000308E26 = {
 			isa = PBXGroup;
 			children = (
+				786C63711CEF220000BE9143 /* Statistics+CoreDataProperties.swift */,
+				786C63721CEF220000BE9143 /* Statistics.swift */,
 				78AE85681CEB098500FF64B2 /* Synonym+CoreDataProperties.swift */,
 				78AE85691CEB098500FF64B2 /* Synonym.swift */,
 				78AE856A1CEB098500FF64B2 /* Dictionary+CoreDataProperties.swift */,
@@ -274,12 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786C63731CEF220000BE9143 /* Statistics+CoreDataProperties.swift in Sources */,
 				78AE857B1CEB33BB00FF64B2 /* DictionaryTableViewCell.swift in Sources */,
 				787566671CEAEA0000308E26 /* lab5_quiz.xcdatamodeld in Sources */,
 				78AE856F1CEB098500FF64B2 /* Synonym.swift in Sources */,
 				78AE85751CEB22CE00FF64B2 /* DictionaryTableViewController.swift in Sources */,
 				78AE856E1CEB098500FF64B2 /* Synonym+CoreDataProperties.swift in Sources */,
 				783364301CEC5EF100D54933 /* SynonymsTableViewController.swift in Sources */,
+				786C63741CEF220000BE9143 /* Statistics.swift in Sources */,
 				78372FE31CEDDB6B0005FD75 /* QuizViewController.swift in Sources */,
 				78AE85731CEB098500FF64B2 /* DictionaryEntry.swift in Sources */,
 				78372FDF1CEDDB120005FD75 /* MainViewController.swift in Sources */,
