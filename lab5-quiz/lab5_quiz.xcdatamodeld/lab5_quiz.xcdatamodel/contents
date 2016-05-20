@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Dictionary" representedClassName=".Dictionary" syncable="YES">
+        <attribute name="from" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="words" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DictionaryEntry" inverseName="dictionary" inverseEntity="DictionaryEntry" syncable="YES"/>
+    </entity>
+    <entity name="DictionaryEntry" representedClassName=".DictionaryEntry" syncable="YES">
+        <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dictionary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Dictionary" inverseName="words" inverseEntity="Dictionary" syncable="YES"/>
+        <relationship name="synonyms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Synonym" inverseName="dictionaryEntry" inverseEntity="Synonym" syncable="YES"/>
+    </entity>
+    <entity name="Synonym" representedClassName=".Synonym" syncable="YES">
+        <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dictionaryEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DictionaryEntry" inverseName="synonyms" inverseEntity="DictionaryEntry" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Dictionary" positionX="-36" positionY="-270" width="128" height="88"/>
+        <element name="DictionaryEntry" positionX="259" positionY="-198" width="128" height="88"/>
+        <element name="Synonym" positionX="108" positionY="-27" width="128" height="73"/>
+    </elements>
+</model>
