@@ -17,13 +17,18 @@ class QuizViewController: UIViewController {
     
     var quiz: Quiz?
     var numberOfPlays : Int? // this comes from other controler
+    let dictionary = Dictionary.createOrGetDictionaryFrom("eng", to: "fin")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(numberOfPlays)
-        let dictionary = Dictionary.createOrGetDictionaryFrom("eng", to: "fin")
         quiz = Quiz(numberOfPlays: numberOfPlays!, dictionary: dictionary!)
         currentWordLabel.text = quiz!.currentWord
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        print("new game")
+        quiz = Quiz(numberOfPlays: numberOfPlays!, dictionary: dictionary!)
     }
 
     override func didReceiveMemoryWarning() {

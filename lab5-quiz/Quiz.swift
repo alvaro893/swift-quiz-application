@@ -25,6 +25,9 @@ class Quiz {
         self.dictionaryEntries = Array(dictionaryEntries)
         self.numberOfPlays = numberOfPlays
         
+        //randomize
+        self.dictionaryEntries.shuffle()
+        
         //first time
         let entry = self.dictionaryEntries.popLast()
         self.currentWord = entry!.word
@@ -65,6 +68,6 @@ class Quiz {
         numberOfPlays -= 1
         return result
     }
-    
 
 }
+
